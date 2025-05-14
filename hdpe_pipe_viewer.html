@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>HDPE Pipe Data Viewer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f8ff;
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px;
+    }
+    h1 {
+      margin-bottom: 20px;
+    }
+    .input-group {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    select, button {
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #007acc;
+    }
+    button {
+      background-color: #007acc;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background-color: #005f99;
+    }
+    table {
+      border-collapse: collapse;
+      width: 400px;
+      background-color: white;
+      margin-top: 20px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    th, td {
+      border: 1px solid #007acc;
+      padding: 10px;
+      text-align: center;
+    }
+    th {
+      background-color: #d4eafa;
+    }
+    .error-message {
+      color: red;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    @media (max-width: 600px) {
+      .input-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+      table {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>HDPE Pipe Data Sheet</h1>
+  <div class="input-group">
+    <label>
+      Diameter (mm):
+      <select id="diameter">
+        <option value="">Select</option>
+      </select>
+    </label>
+    <label>
+      Pressure (bar):
+      <select id="pressure">
+        <option value="">Select</option>
+      </select>
+    </label>
+    <button onclick="showData()">Show Data</button>
+  </div>
+  <div id="error" class="error-message"></div>
+  <table id="resultTable" style="display:none;">
+    <tr><th>Thickness (mm)</th><td id="thickness"></td></tr>
+    <tr><th>Inner Diameter (mm)</th><td id="inner_diameter"></td></tr>
+    <tr><th>Weight (kg/m)</th><td id="weight"></td></tr>
+  </table>
+  <script>
+    // JavaScript content will be added by appending after this in full code.
+  </script>
+</body>
+</html>
